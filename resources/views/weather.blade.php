@@ -80,8 +80,13 @@
             <div class="content">
                 <div class="title m-b-md">
                     IoT Weather
+                </div>                               
+               <div class="links">
+                    <a href="/cloudapp/">Home</a>
+                    <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk/docs">SDK Documentation</a>
+                    <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk">GitHub</a>
                 </div>
-
+				<br>
                 <form method="POST" action="doreport">
                 	<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
                 	<table>
@@ -89,28 +94,33 @@
                 			<td>Report Type:</td>
                 			<td>
                 				<select name="report">
-                					<option value="0" selected>Date Range</option>
-  									<option value="1">Value</option>
+                					<option value="0" selected>Chart</option>
+  									<option value="1">Tabular</option>
 								</select>
 							</td> 
 						</tr>
 						<tr>
 							<td>From Date:</td>
-							<td><input type="text" name="fromDate" value=""></td>
+							<td><input type="text" name="fromDate" value=""><?php echo $errors->first('fromDate')?></td>
 						</tr>
 						<tr>
 							<td>To Date:</td>
-							<td><input type="text" name="toDate" value=""></td>
-						</tr>
-						<tr>
-							<td>ID:</td>
-							<td><input type="text" name="id" value=""></td>
+							<td><input type="text" name="toDate" value=""><?php echo $errors->first('toDate')?></td>
 						</tr>
 						<tr>
 							<td colspan="2"><input type="submit" value="Display"></td>
 						</tr>
+						<tr>
+							<td colspan="2">NOTE: dates must be entered as YYYY-MM-dd HH:MM:SS</td>
+						</tr>
 					</table> 
                 </form>
+                
+                @if(!empty($data))
+                	@php
+                		echo "From the View this is the length" . count($data);
+                	@endphp
+                @endif
             </div>
         </div>
     </body>
