@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Page Title -->
-        <title>GCU Cloud Workshop</title>
+ 		<!-- Page Title -->
+        <title>IoT Weather Report Chart</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -15,25 +15,32 @@
         <!-- Styles -->
         <link href="resources/assets/css/weather.css" rel="stylesheet" type="text/css" >
     </head>
-	<body>
+    <body>
         <div class="flex-center position-ref full-height">
         	<!-- Top Menu -->
             <div class="top-right links">
-                <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk/docs" target="_blank">SDK Documentation</a>
-                <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk" target="_blank">GitHub</a>
+            	<a href="{{ url('/') }}">Home</a>
                 <img src="resources/assets/image/logo.png" width="65" height="65"/>
-			</div>
+ 			</div>
  
- 			<!-- Page Content -->
+			<!-- Page Content -->
             <div class="content">
             	<!--  Title and Menu Links -->
                 <div class="title m-b-md">
-                    GCU IoT Cloud Workshop
+                    IoT Weather Chart Report
+                </div>                               
+               <div class="links">
+                    <a href="weather">Run Another Report</a>
                 </div>
-                <div class="links">
-                    <a href="weather">Weather</a>
-                </div>
-            </div>
+				<br>
+				<!-- Report -->
+				<div class="chart" id="weather_div"></div>
+               	@if($lava)
+               		{!! $lava->render('LineChart', 'Temps', 'weather_div') !!}
+				@else
+					No records found.                	
+                @endif
+             </div>                
         </div>
     </body>
 </html>
