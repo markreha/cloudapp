@@ -8,7 +8,7 @@
 	}
 	
 	div.ui-datepicker {
-    font-size: 70%;
+    font-size: 75%;
 	}
 </style>
 
@@ -17,7 +17,6 @@
 	<div class="content">
         <!--  Title and Menu Links -->
         <div class="title m-b-md">IoT Weather</div>
-        <br>                               
 		<!-- Report Search Form -->
 		<form method="POST" action="doreport">
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
