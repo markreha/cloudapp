@@ -7,17 +7,17 @@
 	<div class="content">
 		<!--  Title and Menu Links -->
 		<div class="title m-b-md">Chart Report</div>
-		<div class="links"><a href="weather">Run Another Report</a></div>
+		<div class="links" style="position:relative;top:60px;"><a href="weather">Run Another Report</a></div>
 		<br>
 		<!-- Report -->
-		<div class="container">
+		<div class="container" style="position:relative;top:70px;">
 			<div class="row">
 				<div class="col-sm-12">
 					<div id="weather_div1">
 						@if($lava) 
 							{!! $lava->render('LineChart','Temps', 'weather_div1') !!} 
 						@else 
-							No records found. 
+							<span style="color:red">No records found.</span> 
 						@endif
 					</div>
 				</div>

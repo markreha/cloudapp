@@ -16,9 +16,9 @@
     <!-- Page Content -->
 	<div class="content">
         <!--  Title and Menu Links -->
-        <div class="title m-b-md" style="margin: 0px;padding: 0px;display: inline">IoT Weather</div>
+        <div class="title m-b-md" style="margin: 0px;padding: 0px;border">IoT Weather</div>
 		<!-- Report Search Form -->
-		<form method="POST" action="doreport">
+		<form method="POST" action="doreport" style="position:relative;top:60px;">
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 			<table style="margin: 0px auto;">
 				<tr>
@@ -35,14 +35,14 @@
 					<td><input type="text" id="fromDate" name="fromDate" value="" readonly="1"></td>
 				</tr>
 				<tr align="center">
-					<td colspan="2" style="color: red"><?php echo $errors->first('fromDate')?></td>
+					<td colspan="2" style="color:red"><?php echo $errors->first('fromDate')?></td>
 				</tr>
 				<tr>
 					<td>To Date:</td>
 					<td><input type="text" id="toDate" name="toDate" value="" readonly="true"></td>
 				</tr>
 				<tr align="center">
-					<td colspan="2" style="color: red"><?php echo $errors->first('toDate')?></td>
+					<td colspan="2" style="color:red"><?php echo $errors->first('toDate')?></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="Display"></td>
