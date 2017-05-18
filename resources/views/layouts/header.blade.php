@@ -14,4 +14,4 @@
         </div>
     </div>
 </div>
-<img src="resources/assets/image/logo.png" width="65" height="65"/>
+<img src="resources/assets/image/logo.png" width="65" height="65" style="margin: 10px;"/>
