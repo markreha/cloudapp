@@ -62,7 +62,7 @@ class WeatherController extends Controller
 					{
 						$weatherData->addRow([$item['date'], $item['temperature'], $item['pressure'], $item['humidity']]);
 					}
-					$lava->LineChart('Temps', $weatherData, ['title' => 'Weather in Date Range', 'width' => 1280]);
+					$lava->LineChart('Temps', $weatherData, ['title' => 'Weather in Date Range']);
 					return view("weatherReportChart")->with("lava", $lava);
 				}
 				else
