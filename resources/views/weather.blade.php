@@ -8,7 +8,7 @@
 	}
 	
 	div.ui-datepicker {
-    font-size: 75%;
+    font-size: 85%;
 	}
 </style>
 
