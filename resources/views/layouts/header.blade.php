@@ -9,7 +9,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="./">Home<br></a></li>
                 <li><a href="https://github.com/markreha/cloudworkshop/tree/master/sdk" target="_blank">SDK</a></li>
-                <li><a href="https://github.com/markreha/cloudapp"  target="_blank">GitHub<br></a></li>
+                <li><a href="https://github.com/markreha"  target="_blank">GitHub<br></a></li>
             </ul>
         </div>
     </div>
