@@ -7,10 +7,10 @@
 	<div class="content">
 		<!--  Title and Menu-->
 		<div class="title m-b-md">Data Report</div>
-		<div class="links" style="position:relative;top:60px;"><a href="weather">Run Another Report</a></div>
+		<div class="links"><a href="weather">Run Another Report</a></div>
 		<br>
 		<!-- Report -->
-		<div class="flex-center" style="position:relative;top:70px;">
+		<div class="flex-center">
 			@if(!empty($data['data']))
 				<table style="margin: 0px auto;text-align: center;" class="table-responsive" border="1">
 					<tr>

@@ -16,9 +16,9 @@
     <!-- Page Content -->
 	<div class="content">
         <!--  Title and Menu Links -->
-        <div class="title m-b-md" style="margin: 0px;padding: 0px;border">IoT Weather</div>
+        <div class="title m-b-md">IoT Weather</div>
 		<!-- Report Search Form -->
-		<form method="POST" action="doreport" style="position:relative;top:60px;">
+		<form method="POST" action="doreport">
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 			<table style="margin: 0px auto;">
 				<tr>

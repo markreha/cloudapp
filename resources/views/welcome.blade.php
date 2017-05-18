@@ -6,10 +6,10 @@
 	<!-- Page Content -->
 	<div class="content">
         <!--  Title -->
-        <div class="title m-b-md" style="">IoT Measures</div>
+        <div class="title m-b-md">IoT Measures</div>
         <br>
         <!-- IoT Menu -->                               
-		<div class="links" style="position:relative;top:60px;">
+		<div class="links">
 			<a href="weather">Weather</a>
 		</div>
 	</div>

@@ -7,10 +7,10 @@
 	<div class="content">
 		<!--  Title and Menu -->
 		<div class="title m-b-md">Report Error</div>
-		<div class="links" style="position:relative;top:60px;"><a href="weather">Run Another Report</a></div>
+		<div class="links"><a href="weather">Run Another Report</a></div>
 		<br>
 		<!-- Display Error -->
-		<div style="position:relative;top:70px;">
+		<div>
 			<span style="color:red">Error Status Code: $error.</span> 
 		</div>		
 	</div>

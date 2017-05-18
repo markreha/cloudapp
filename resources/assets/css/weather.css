@@ -35,10 +35,7 @@
                 font-size: 42px;
                 color: #462D87;
                 text-align:center;
-                position:fixed;
-                z-index:1;
-                width:100%;
-              }
+               }
 
             .links > a {
                 color: #F5AA00;           
@@ -48,11 +45,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-                text-align:center;
-                position:fixed;
-                left:0;z-index:1;
-                width:100%;
-            }
+             }
 
             .m-b-md {
                 margin-bottom: 30px;
