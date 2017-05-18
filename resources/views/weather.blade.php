@@ -23,24 +23,30 @@
 			<table style="margin: 0px auto;">
 				<tr>
 					<td>Report Type:</td>
-					<td><select name="report">
+					<td>
+						<select name="report">
 							<option value="0" selected>Chart</option>
 							<option value="1">Tabular</option>
-					</select></td>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td>From Date:</td>
-					<td><input type="text" id="fromDate" name="fromDate" value="" readonly="true"><?php echo $errors->first('fromDate')?></td>
+					<td><input type="text" id="fromDate" name="fromDate" value="" readonly="1"></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2" style="color: red"><?php echo $errors->first('fromDate')?></td>
 				</tr>
 				<tr>
 					<td>To Date:</td>
-					<td><input type="text" id="toDate" name="toDate" value="" readonly="true"><?php echo $errors->first('toDate')?></td>
+					<td><input type="text" id="toDate" name="toDate" value="" readonly="true"></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2" style="color: red"><?php echo $errors->first('toDate')?></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="Display"></td>
 				</tr>
-				<tr align="center">
-					<td colspan="2">NOTE: dates must be entered as YYYY-MM-dd HH:MM:SS</td>
 				</tr>
 			</table>
 		</form>
