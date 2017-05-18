@@ -30,11 +30,11 @@
 				</tr>
 				<tr>
 					<td>From Date:</td>
-					<td><input type="text" id="fromDate" name="fromDate" value=""><?php echo $errors->first('fromDate')?></td>
+					<td><input type="text" id="fromDate" name="fromDate" value="" readonly="true"><?php echo $errors->first('fromDate')?></td>
 				</tr>
 				<tr>
 					<td>To Date:</td>
-					<td><input type="text" id="toDate" name="toDate" value=""><?php echo $errors->first('toDate')?></td>
+					<td><input type="text" id="toDate" name="toDate" value="" readonly="true"><?php echo $errors->first('toDate')?></td>
 				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="Display"></td>
