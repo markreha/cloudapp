@@ -6,7 +6,7 @@
 	<!-- Page Content -->
 	<div class="content">
 		<!--  Title and Menu Links -->
-		<div class="title m-b-md">IoT Weather Error</div>
+		<div class="title m-b-md">Report Error</div>
 		<div class="links">
 			<a href="weather">Run Another Report</a>
 		</div>
