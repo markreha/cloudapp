@@ -6,6 +6,10 @@
 	th, td {
 		padding: 5px;
 	}
+	
+	div.ui-datepicker {
+    font-size: 70%;
+	}
 </style>
 
 <div class="flex-center position-ref full-height">
