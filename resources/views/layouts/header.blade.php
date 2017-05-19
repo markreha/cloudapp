@@ -14,6 +14,9 @@
         </div>
     </div>
 </div>
-<div id="logo" style="float:left; display:inline; width: 65px; height: 65px; margin: 5px;position: absolute;z-index: 1000;">
-	<img src="resources/assets/image/logo.png" width="65" height="65"/>
+<div id="logo" style="float:left; display:inline; margin: 5px;position: absolute;z-index: 1000;">
+	<picture>
+		<source srcset="resources/assets/image/logo-sm.png" media="(max-width: 768px)">
+ 		<img src="resources/assets/image/logo.png"/>
+	</picture>
 </div>
