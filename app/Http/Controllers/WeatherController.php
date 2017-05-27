@@ -15,14 +15,31 @@ use Khill\Lavacharts\Lavacharts;
 class WeatherController extends Controller
 {
 	/**
-	 * doReport() that is the back end for the Report Generator, which performs the following functions:
-	 * 	1. Gets the POSTED form parameters.
-	 *  2. Validates the form data.
-	 *  3. Calls the Web API to get the Weather Data.
-	 *  4. Renders a Weather Report.
+	 * doReport() that is the back end Form Post Handler for the Report Generator, as shown in the figure below, which performs the following functions:
+	 * 
+	 *  <br>
+	 *  <img src="../images/app.jpg"/>
+	 *  <br>
+	 *  <ul>
+	 *  <li>Gets the POSTED form parameters</li>
+	 *  	- report = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
+	 *  	- fromDate = report start date<br/>
+	 *  	- toDate = report end date
+	 *  <li>Validates the form data</li>
+	 *  	- if validation fails the Weather View is redisplayed
+	 *  <li>Calls the Web API to get the Weather Data using the GuzzleHttp Client</li>
+	 *  	- GET request to the CloudService REST /get API passing a Device ID of 0 and From Date and To Date as API parameters<br/>
+	 *  	- CloudService REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the Cloud Services SDK JavaDocs)
+	 *  <li>Renders a Weather Report</li>
+	 *  	- If report is 0 then use Lavaharts to render a Line Graph forwarding to the WeatherReportChart View<br/>
+	 *  	- Else if report is 1 then render an HTML forwarding to the WeatherReportTable View
+	 *  </ul>
 	 *  
+	 * See route setup in routes/web.php: HTTP POST to /doreport.
+	 * 
 	 * @param Request $request
-	 * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
+	 * @return Weather View if validation error, WeatherReportChart View to display chart report, or WeatherReportTable View to display tabular report
+	 *  
 	 */
 	public function doReport(Request $request)
 	{
@@ -84,7 +101,7 @@ class WeatherController extends Controller
 	}
 	
 	/**
-	 * Validate the Report Generation Form data.
+	 * Private helper function to validate the Report Generation Form data.
 	 * 
 	 * @param Request $request
 	 */
