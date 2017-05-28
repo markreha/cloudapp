@@ -28,6 +28,8 @@
 					</tr>
 				@endforeach
 			</table>
+			<br>
+			<br>
 			@else 
 				<span style="color:red">No records found.</span> 
 			@endif
