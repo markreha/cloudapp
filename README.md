@@ -6,11 +6,11 @@ The example IoT Reporting Reference application implements a simple IoT Reportin
 
 Architecture & Technologies
 --------
- The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application also imports the LavaCharts library, for charting, and the Guzzle library, for an HTTP Client for making REST API calls. 
+ The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application imports the LavaCharts library, for charting, and the Guzzle library, for an HTTP Client used for making the REST API calls. The application also uses the jQuery based UI date time picker to support displaying an easy to use, touch friendly, UI widget for entering dates and times.
  
-Application Functionality
+Basic Application Functionality
 --------
-The IoT Reporting Reference application functionality includes implementing a simple reporting parameter screen, allowing the user to specify the Report Type, Report Start Date, and Report End Date, and a report screen, displaying the IoT data either as a Tabular Report or a Line Chart Report.
+The IoT Reporting Reference application primary functionality includes implementing a simple reporting parameter screen, allowing the user to specify the Report Type, Report Start Date, and Report End Date, and a report display screen, displaying the IoT data either as a Tabular Report or a Line Chart Report. The main application is displayed by the Welcome View and uses standard Laravel layouts to display common application menus, headers, and footers. The application supports a response design and can be accessed from desktop, mobile, and tablet browsers.
 
 The bulk of the Reporting functionality is implemented in the WeatherController class in the doReport() method. This method performs the following logic:
 <ul>
