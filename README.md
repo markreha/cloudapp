@@ -14,11 +14,11 @@ The IoT Reporting Reference application functionality includes implementing a si
 
 The bulk of the Reporting functionality is implemented in the WeatherController class in the doReport() method. This method performs the following logic:
 <ul>
-	 <li>Gets the POSTED form parameter from the reporting parameters Weather View:</li>
+	 <li>Retrieves the POSTED form data from the Weather View:</li>
 	 - reportType = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
 	 - fromDate = Report From Date<br/>
 	 - toDate = Report To Date
-	 <li>Validates the form data:</li>
+	 <li>Validates the POSTED form data:</li>
 	 - if validation fails the Weather View is redisplayed
 	 <li>Invokes the IoT Services REST API to get the Weather Data using the Guzzle HTTP Client class:</li>
 	 - GET request to the IoT Service /get REST API passing a Device ID of 0, the Report From Date, and the Report To Date as API parameters<br/>
