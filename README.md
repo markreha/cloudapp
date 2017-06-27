@@ -10,7 +10,7 @@ Architecture & Technologies
  
 Basic Application Functionality
 --------
-The IoT Reporting Reference application, as show in the screen shots below, primary functionality includes implementing a simple reporting parameter screen, allowing the user to specify the Report Type, Report Start Date, and Report End Date, and a report display screen, displaying the IoT data either as a Tabular Report or a Line Chart Report. The main application is displayed by the Welcome View and uses standard Laravel layouts to display common application menus, headers, and footers. The application supports a response design and can be accessed from desktop, mobile, and tablet browsers.
+The IoT Reporting Reference application, as show in the screen shots below, primary functionality includes implementing a simple reporting parameter screen, allowing the user to specify the Report Type, Report Start Date, and Report End Date, and a report display screen, displaying the IoT data either as a Tabular Report or a Line Chart Report. The main application is displayed by the Welcome View and uses standard Laravel layouts to display common application menus, headers, and footers. The application supports a responsive design and can be accessed from desktop, mobile, and tablet browsers.
 
 ![IoT Reporting Screen Shots](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/images/iotreportingss.png)
 
