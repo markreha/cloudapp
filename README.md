@@ -34,7 +34,7 @@ Information on the Guzle Library can be found [here](http://guzzle.readthedocs.i
 
 Information on the LavaCharts Library can be found [here](http://lavacharts.com).
 
-The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
+The PhpDoc for the entire application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
 
 Building
 --------
