@@ -6,25 +6,37 @@ The example IoT Reporting Reference application implements a simple IoT Reportin
 
 Architecture & Technologies
 --------
- The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application also imports the LavaCharts library, for charting, and the Guzzle library, for an HTTP Client for making REST API calls. 
+ The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application also imports the LavaCharts library, for charting, and the Guzzle library, for an HTTP Client for making REST API calls. 
  
-REST API's
+Application Functionality
 --------
-The IoT Services Reference application publishes 3 API's, one of which is an API used for testing and the remaining 2 API's to save and retrieve IoT Weather Data. It should be noted that the REST endpoint is secured by using HTTPS and Basic HTTP Authentication. All REST API's are based off of the [hostname]/cloudservices/weather URL.
+The IoT Reporting Reference application functionality includes implementing a simple reporting parameter screen, allowing the user to specify the Report Type, Report Start Date, and Report End Date, and a report screen, displaying the IoT data either as a Tabular Report or a Line Chart Report.
 
-The REST API's as based off of the include:
+The bulk of the Reporting functionality is implemented in the WeatherController class in the doReport() method. This method performs the following logic:
+<ul>
+	 <li>Gets the POSTED form parameter from the reporting parameters Weather View:</li>
+	 - reportType = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
+	 - fromDate = Report From Date<br/>
+	 - toDate = Report To Date
+	 <li>Validates the form data:</li>
+	 - if validation fails the Weather View is redisplayed
+	 <li>Invokes the IoT Services REST API to get the Weather Data using the Guzzle HTTP Client class:</li>
+	 - GET request to the IoT Service /get REST API passing a Device ID of 0, the Report From Date, and the Report To Date as API parameters<br/>
+	 - the IoT Services REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the IoT Services Reference application JavaDocs)
+	 <li>Renders the Weather Report:</li>
+	 - If the reportType is 0 then use LavaCharts to render a Line Graph by forwarding to the WeatherReportChart View<br/>
+	 - else if the reportType is 1 then render a standard HTML table by forwarding to the WeatherReportTable View
+	 </ul>
 
- - GET at /test: will return a test string and is used to test the endpoint
- - GET at /get: will return IoT Weather data for a specified Device ID, From Date, and End Date
- - POST at /save: will save IoT Weather data from the a specified WeatherSensorModel
+Information on the Guzle Library can be found [here](http://guzzle.readthedocs.io/en/latest/index.html).
 
-The UML class diagram for the Services class can be found [here](http://htmlpreview.github.io/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/javadoc/edu/gcu/web/service/RestService.html).
+Information on the LavaCharts Library can be found [here](http://lavacharts.com).
 
-The JavaDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/javadoc/index.html) 
+The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
 
 Building
 --------
-The instructions for building the IoT Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
+The instructions for building the IoT Reporting Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
 
 
 ----------
