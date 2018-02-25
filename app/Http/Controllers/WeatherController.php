@@ -52,7 +52,7 @@ class WeatherController extends Controller
 		$this->validateForm($request);
 		
 		// Call Web API to get Weather Data
-		$serviceURL = "http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/";
+		$serviceURL = "https://markwsserve.azurewebsites.net/cloudservices/rest/weather/";
 		$api = "get";
 		$device = 0;		
 		$uri = $api . "/" . $device . "/" . $from . "/" . $to;
