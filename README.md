@@ -40,7 +40,7 @@ The PhpDoc for the entire application can be found [here](http://htmlpreview.git
 
 Building
 --------
-The instructions for building the IoT Reporting Reference application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
+The instructions for building the IoT Services Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
 
 
 ----------
