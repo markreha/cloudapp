@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Khill\Lavacharts\Lavacharts;
@@ -52,8 +53,12 @@ class WeatherController extends Controller
 		$this->validateForm($request);
 		
 		// Call Web API to get Weather Data
-		//$serviceURL = "https://markwsserve.azurewebsites.net/cloudservices/rest/weather/";
-		$serviceURL = "http://test-marktest.7e14.starter-us-west-2.openshiftapps.com/cloudservices/rest/weather/";
+        if (App::environment('azure'))
+			$serviceURL = "https://markwsserve.azurewebsites.net/cloudservices/rest/weather/";
+        else if (App::environment('openshift'))
+			$serviceURL = "http://test-marktest.7e14.starter-us-west-2.openshiftapps.com/cloudservices/rest/weather/";
+        else
+			$serviceURL = "http://localhost:8080/cloudservices/rest/weather/";
 		$api = "get";
 		$device = 0;		
 		$uri = $api . "/" . $device . "/" . $from . "/" . $to;
