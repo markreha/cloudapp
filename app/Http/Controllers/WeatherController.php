@@ -54,7 +54,7 @@ class WeatherController extends Controller
 		
 		// Call Web API to get Weather Data
         if (App::environment('azure'))
-			$serviceURL = "https://markwsserve.azurewebsites.net/cloudservices/rest/weather/";
+			$serviceURL = "https://markwsserve2.azurewebsites.net/cloudservices/rest/weather/";
         else if (App::environment('openshift'))
 			$serviceURL = "http://test-marktest.7e14.starter-us-west-2.openshiftapps.com/cloudservices/rest/weather/";
         else
