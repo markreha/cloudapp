@@ -71,10 +71,10 @@ class WeatherController extends Controller
 		if($response->getStatusCode() == 200)
 		{
 			// Convert JSON to Objects and render report
-			$jsonObj = json_decode($json = $response->getBody(), true);
+			$jsonObj = json_decode($response->getBody(), true);
 			if($report == 0)
 			{
-				// If data then display Chart else display error
+				// If data then display Lava Chart else display error
 				if(count($jsonObj['data']) != 0)
 				{	
 					// Build a Lavachart Datatable, Line Chart, and pass the Chart to the View to render
@@ -93,6 +93,33 @@ class WeatherController extends Controller
 					// Pass null Chart to display "no records found"
 					return view("weatherReportChart")->with("lava", null);
 				}
+			}
+			else if($report == 1)
+			{
+			    // If data then display Plotly Chart else display error
+			    if(count($jsonObj['data']) != 0)
+			    {
+			        // Build a X and Y Line Chart Data and pass the Data to the View to render
+			        $index = 0;
+			        $dates = array();
+			        $temperature = array();
+			        $pressure = array();
+			        $humidity = array();
+			        foreach ($jsonObj['data'] as $item)
+			        {
+			            $dates[$index] = $item['date'];
+			            $temperature[$index] = $item['temperature'];
+			            $pressure[$index] = $item['pressure'];
+			            $humidity[$index] = $item['humidity'];
+			            ++$index;
+			        }
+			        return view("weatherReportChartPlotly")->with("data", ['dates' => json_encode($dates), 'temperature' => json_encode($temperature), 'pressure' => json_encode($pressure), 'humidity' => json_encode($humidity), 'title' => json_encode('Weather in Date Range')]);
+			    }
+			    else
+			    {
+			        // Pass null JSON to display "no records found"
+			        return view("weatherReportChartPlotly")->with("json", null);
+			    }
 			}
 			else
 			{

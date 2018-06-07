@@ -15,6 +15,8 @@
     <script type="text/javascript" src="resources/assets/js/jquery-ui-sliderAccess.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/assets/css/jquery-ui-timepicker-addon.css">
 	<link rel="stylesheet" media="all" type="text/css" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" />
+	
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <title>@yield('title')</title>
 </head>
