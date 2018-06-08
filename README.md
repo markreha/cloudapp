@@ -8,7 +8,7 @@ The example IoT Reporting Reference application implements a simple IoT Reportin
 
 Architecture & Technologies
 --------
- The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application imports the LavaCharts and Plotly libraries, for charting, the jQuery DataTable library, for tabular data, and the Guzzle library, for an HTTP Client used for making the REST API calls. The application also uses the jQuery based UI date time picker to support displaying an easy to use, touch friendly, UI widget for entering dates and times.
+ The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application imports the LavaCharts and Plotly libraries, for charting, the jQuery Data Table library, for tabular data, and the Guzzle library, for an HTTP Client used for making the REST API calls. The application also uses the jQuery based UI date time picker to support displaying an easy to use, touch friendly, UI widget for entering dates and times.
  
 Basic Application Functionality
 --------
@@ -19,7 +19,7 @@ The IoT Reporting Reference application, as show in the screen shots below, prim
 The bulk of the Reporting functionality is implemented in the WeatherController class in the doReport() method. This method performs the following logic:
 <ul>
 	 <li>Retrieves the POSTED form data from the Weather View:</li>
-	 - reportType = 0 for LavaChart Chart Report, 2 for Plotly Chart Report, 3 for Tabular HTML Data Report, and 4 for jQuery DataTable Data Report<br/>
+	 - reportType = 0 for LavaChart Chart Report, 2 for Plotly Chart Report, 3 for Tabular HTML Data Report, and 4 for jQuery Data Table Data Report<br/>
 	 - fromDate = Report From Date<br/>
 	 - toDate = Report To Date
 	 <li>Validates the POSTED form data:</li>
@@ -40,7 +40,7 @@ Information on the LavaCharts Library can be found [here](http://lavacharts.com)
 
 Information on the PLotly Library can be found [here](https://plot.ly/javascript/).
 
-Information on the jQuery DataTable Library can be found [here](https://datatables.net).
+Information on the jQuery Data Table Library can be found [here](https://datatables.net).
 
 The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
 
