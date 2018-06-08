@@ -8,7 +8,7 @@ The example IoT Reporting Reference application implements a simple IoT Reportin
 
 Architecture & Technologies
 --------
- The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application imports the LavaCharts library, for charting, and the Guzzle library, for an HTTP Client used for making the REST API calls. The application also uses the jQuery based UI date time picker to support displaying an easy to use, touch friendly, UI widget for entering dates and times.
+ The IoT Reporting Reference application is designed and implemented in PHP using the Laravel Framework. The application uses Bootstrap to assist in supporting a responsive design. The application imports the LavaCharts and Plotly libraries, for charting, the jQuery DataTable library, for tabular data, and the Guzzle library, for an HTTP Client used for making the REST API calls. The application also uses the jQuery based UI date time picker to support displaying an easy to use, touch friendly, UI widget for entering dates and times.
  
 Basic Application Functionality
 --------
@@ -19,7 +19,7 @@ The IoT Reporting Reference application, as show in the screen shots below, prim
 The bulk of the Reporting functionality is implemented in the WeatherController class in the doReport() method. This method performs the following logic:
 <ul>
 	 <li>Retrieves the POSTED form data from the Weather View:</li>
-	 - reportType = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
+	 - reportType = 0 for LavaChart Chart Report, 2 for Plotly Chart Report, 3 for Tabular HTML Data Report, and 4 for jQuery DataTable Data Report<br/>
 	 - fromDate = Report From Date<br/>
 	 - toDate = Report To Date
 	 <li>Validates the POSTED form data:</li>
@@ -29,7 +29,9 @@ The bulk of the Reporting functionality is implemented in the WeatherController 
 	 - the IoT Services REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the IoT Services Reference application JavaDocs)
 	 <li>Renders the Weather Report:</li>
 	 - If the reportType is 0 then use LavaCharts to render a Line Graph by forwarding to the WeatherReportChart View<br/>
-	 - else if the reportType is 1 then render a standard HTML table by forwarding to the WeatherReportTable View
+	 - else if the reportType is 1 then use Plotyly to render a Line Graph by forwarding to the WeatherReportChartPlotly View<br/>
+	 - else if the reportType is 3 then render a standard HTML table by forwarding to the WeatherReportTable View
+	 - else if the reportType is 4 then render a jQuery Data Table table by forwarding to the WeatherReportTablejQuery View
 	 </ul>
 
 Information on the Guzle Library can be found [here](http://guzzle.readthedocs.io/en/latest/index.html).
