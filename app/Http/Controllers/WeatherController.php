@@ -121,10 +121,15 @@ class WeatherController extends Controller
 			        return view("weatherReportChartPlotly")->with("json", null);
 			    }
 			}
-			else
+			else if($report == 2)
 			{
 				// Pass the Weather data to the View to render in an HTML Table
 				return view("weatherReportTable")->with("data", $jsonObj);
+			}
+			else
+			{
+			    // Pass the Weather data to the View to render in a jQuery Data Table
+			    return view("weatherReportTablejQuery")->with("data", json_encode($jsonObj));
 			}
 		}
 		else

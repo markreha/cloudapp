@@ -27,7 +27,8 @@
 						<select name="report">
 							<option value="0" selected>Chart (Lava)</option>
 							<option value="1">Chart (Plotly)</option>
-							<option value="2">Tabular</option>
+							<option value="2">Tabular (HTML)</option>
+							<option value="3">Tabular (jQuery)</option>
 						</select>
 					</td>
 				</tr>
