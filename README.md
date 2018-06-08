@@ -30,7 +30,7 @@ The bulk of the Reporting functionality is implemented in the WeatherController 
 	 <li>Renders the Weather Report:</li>
 	 - If the reportType is 0 then use LavaCharts to render a Line Graph by forwarding to the WeatherReportChart View<br/>
 	 - else if the reportType is 1 then use Plotyly to render a Line Graph by forwarding to the WeatherReportChartPlotly View<br/>
-	 - else if the reportType is 3 then render a standard HTML table by forwarding to the WeatherReportTable View
+	 - else if the reportType is 3 then render a standard HTML table by forwarding to the WeatherReportTable View<br/>
 	 - else if the reportType is 4 then render a jQuery Data Table table by forwarding to the WeatherReportTablejQuery View
 	 </ul>
 
