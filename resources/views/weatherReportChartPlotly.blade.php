@@ -16,11 +16,14 @@
 					<div id="weather_div">
 						@if($data) 
 							<script>
+								// Get all Data from Laravel Controller
 								var title = {!!$data['title']!!};
 								var dates = {!!$data['dates']!!};
 								var temperature = {!!$data['temperature']!!};
 								var pressure = {!!$data['pressure']!!};
 								var humidity = {!!$data['humidity']!!};
+
+								// Render a Line Chart using Plotly
     							(function() 
     	    					 {
     								var d3 = Plotly.d3;    

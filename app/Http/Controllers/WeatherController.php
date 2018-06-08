@@ -23,7 +23,7 @@ class WeatherController extends Controller
 	 *  <br>
 	 *  <ul>
 	 *  <li>Gets the POSTED form parameters</li>
-	 *  	- report = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
+	 *  	- report = 0 for Lavachart Chart Report or 1 for Plotly Chart Report or 2 for Tabular HTML Data Report or 3 for Tabular jQuery Data Table Report<br/>
 	 *  	- fromDate = report start date<br/>
 	 *  	- toDate = report end date
 	 *  <li>Validates the form data</li>
@@ -33,7 +33,9 @@ class WeatherController extends Controller
 	 *  	- CloudService REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the Cloud Services SDK JavaDocs)
 	 *  <li>Renders a Weather Report</li>
 	 *  	- If report is 0 then use Lavaharts to render a Line Graph forwarding to the WeatherReportChart View<br/>
-	 *  	- Else if report is 1 then render an HTML forwarding to the WeatherReportTable View
+	 *  	- Else if report is 1 then use Plotly to render a Line Graph forwarding to the WeatherReportChartPlotly View<br/>
+	 *  	- Else if report is 2 then render an HTML Table forwarding to the WeatherReportTable<br/>
+	 *  	- Else report then render an jQuery Data Table forwarding to the WeatherReportTablejQuery View
 	 *  </ul>
 	 *  
 	 * See route setup in routes/web.php: HTTP POST to /doreport.

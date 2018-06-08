@@ -13,9 +13,13 @@
 		<div class="flex-center">
 			@if($data)
      			<script>
+ 					// Display Weather Data in a jQuery Data Table
       				function displayData()
       				{
+						// Get Data from Laravel Controller
           				var json = {!!$data!!};
+
+						// Render a Table using jQuery Data Table
       					$('#dataTable').dataTable({
        						"responsive" : true,
         					"data": json.data,
@@ -25,7 +29,8 @@
          			      		      	
       		      	// Get Weather Data and display using jQuery Data Table
       		        $(document).ready(displayData);
-      			</script>   
+      			</script>  
+      			 
  	            <!-- Weather Data Table -->
 				<table id="dataTable" style="width:50%" border="1" class="display">
       				<thead>
