@@ -42,9 +42,7 @@ Information on the Plotly Library can be found [here](https://plot.ly/javascript
 
 Information on the jQuery Data Table Library can be found [here](https://datatables.net).
 
-The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
-
-The PhpDoc for the entire application can be found <a href="http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html" target="_blank">here</a>
+The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html){:target="_blank"}
 
 Building
 --------
