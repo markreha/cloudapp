@@ -38,6 +38,10 @@ Information on the Guzle Library can be found [here](http://guzzle.readthedocs.i
 
 Information on the LavaCharts Library can be found [here](http://lavacharts.com).
 
+Information on the PLotly Library can be found [here](https://plot.ly/javascript/).
+
+Information on the jQuery DataTable Library can be found [here](https://datatables.net).
+
 The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
 
 Building
