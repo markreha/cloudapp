@@ -44,6 +44,8 @@ Information on the jQuery Data Table Library can be found [here](https://datatab
 
 The PhpDoc for the entire application can be found [here](http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html) 
 
+The PhpDoc for the entire application can be found <a href="http://htmlpreview.github.com/?https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/phpdoc/index.html" target="_blank">here</a>
+
 Building
 --------
 The instructions for building the IoT Services Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
