@@ -1,6 +1,6 @@
 **IoT Reporting Reference Application**
 ==================
-The example IoT Reporting Reference application implements a simple IoT Reporting application that can be used to display the posted data from the IoT Device Raspberry Pi Sense HAT application. The IoT Reporting Reference application consumes a REST API published by the [IoT Services Reference application](https://github.com/markreha/cloudservices/blob/master/README.md). These applications in combination  demonstrate a simple, scalable, Cloud based IoT application. Return to the [Cloud Workshop SDK](https://github.com/markreha/workshop/blob/master/README.md).
+The example IoT Reporting Reference application implements a simple IoT Reporting application that can be used to display the posted data from the IoT Device Raspberry Pi Sense HAT application. The IoT Reporting Reference application consumes a REST API published by the [IoT Services Reference application](https://github.com/markreha/cloudservices/blob/master/README.md). These applications in combination  demonstrate a simple, scalable, Cloud based IoT application. Return to the [Cloud Workshop SDK](https://github.com/markreha/cloudworkshop/blob/master/README.md).
 
 <p align="center">
 	<img src="https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/images/iotreporting.png" alt="IoT Reporting Logical Architecture"/>
