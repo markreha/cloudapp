@@ -38,7 +38,7 @@ Information on the Guzle Library can be found [here](http://guzzle.readthedocs.i
 
 Information on the LavaCharts Library can be found [here](http://lavacharts.com).
 
-Information on the PLotly Library can be found [here](https://plot.ly/javascript/).
+Information on the Plotly Library can be found [here](https://plot.ly/javascript/).
 
 Information on the jQuery Data Table Library can be found [here](https://datatables.net).
 
