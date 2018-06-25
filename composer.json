@@ -38,6 +38,7 @@
         ],
         "post-install-cmd": [
 			"Illuminate\\Foundation\\ComposerScripts::postInstall",
+			"mkdir -p bootstrap/cache",
 			"chmod -R 755 app bootstrap storage",
 			"mkdir -p storage/app",
 			"mkdir -p storage/framework/cache",
