@@ -5,7 +5,7 @@ before_script:
 #  - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 #  - apt-get update && apt-get install google-cloud-sdk
   - curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --install-dir=~/gcloud --disable-prompts
-  - /root/gcloud/google-cloud-sdk/path.bash.inc
+  - ~/gcloud/google-cloud-sdk/path.bash.inc
   
 after_script:
   - rm /tmp/$CI_PIPELINE_ID.json
