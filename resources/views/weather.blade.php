@@ -22,7 +22,7 @@
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 			<table style="margin: 0px auto;">
 				<tr>
-					<td>Report Types:</td>
+					<td>Report Type:</td>
 					<td>
 						<select name="report">
 							<option value="0" selected>Chart (Lava)</option>
