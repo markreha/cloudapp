@@ -10,7 +10,8 @@ after_script:
   - echo "IN AFTER"
   - rm /tmp/$CI_PIPELINE_ID.json
 
-deploy_production:
+deploy:
+#deploy_production:
 #  stage: deploy
 #  environment: Production
 #  only:
