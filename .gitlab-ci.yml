@@ -12,7 +12,7 @@ after_script:
 
 deploy_production:
   stage: deploy
-  environment: Production
+  environment: production
   only:
     - master
   script:
