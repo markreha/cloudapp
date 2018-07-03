@@ -9,10 +9,10 @@ after_script:
   - rm /tmp/$CI_PIPELINE_ID.json
 
 deploy_production:
-  stage: deploy
-  environment: Production
-  only:
-    - master
+#  stage: deploy
+#  environment: Production
+#  only:
+#    - master
   script:
     - echo "I am here"
     - echo $CI_PIPELINE_ID
