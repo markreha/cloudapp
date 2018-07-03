@@ -14,6 +14,8 @@ deploy_production:
   only:
     - master
   script:
+    - echo "I am here"
+    - echo $CI_PIPELINE_ID
     - echo $DEPLOY_KEY_FILE_PRODUCTION > /tmp/$CI_PIPELINE_ID.json
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
     - gcloud --quiet --project $PROJECT_ID_PRODUCTION app deploy
