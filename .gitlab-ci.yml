@@ -1,14 +1,16 @@
-image: google/cloud-sdk
+variables:
+  - CLOUD_PLATFORM="google"
 
-after_script:
-  - rm /tmp/$CI_PIPELINE_ID.json
-
-deploy_production:
+deploy_google:
+  image: google/cloud-sdk
   stage: deploy
-  environment: production
+  environment: $CLOUD_PLATFORM
   only:
     - master
   script:
+    - echo "Deploying for Google Cloud Platform"
     - echo $DEPLOY_KEY_FILE_PRODUCTION > /tmp/$CI_PIPELINE_ID.json
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
     - gcloud --quiet --project $PROJECT_ID_PRODUCTION app deploy
+  after_script:
+    - rm /tmp/$CI_PIPELINE_ID.json
