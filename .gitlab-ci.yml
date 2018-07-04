@@ -1,5 +1,5 @@
 variables:
-  - CLOUD_PLATFORM="google"
+  CLOUD_PLATFORM: "google"
 
 deploy_google:
   image: google/cloud-sdk
