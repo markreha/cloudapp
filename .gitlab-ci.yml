@@ -14,6 +14,20 @@ deploy_openshift:
         - oc logout
     when: manual
 
+deploy_azure:
+    image: centos
+    stage: deploy
+    environment: azure
+    only:
+        - master
+    script:
+        - echo "Deploying for Azure Cloud Platform"
+        - sed -i 's/^APP_ENV=.*/APP_ENV=azure/' .env
+        - yum install zip -y
+        - /usr/bin/zip -r cloudapp.zip .
+        - curl -X POST -u mybuilder:Test123! --data-binary @"cloudapp.zip" https://markwsapp.scm.azurewebsites.net/api/ZipDeploy
+    when: manual
+
 deploy_google:
     image: google/cloud-sdk
     stage: deploy
@@ -23,6 +37,7 @@ deploy_google:
     script:
         - echo "Deploying for Google Cloud Platform"
         - echo $DEPLOY_KEY_FILE_PRODUCTION > /tmp/$CI_PIPELINE_ID.json
+        - sed -i 's/^APP_ENV=.*/APP_ENV=google/' .env
         - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
         - gcloud --quiet --project $PROJECT_ID_PRODUCTION app deploy
     after_script:
