@@ -43,3 +43,18 @@ deploy_google:
     after_script:
         - rm /tmp/$CI_PIPELINE_ID.json
     when: manual
+    
+deploy_heroku:
+    image: centos
+    stage: deploy
+    environment: heroku
+    only:
+        - master
+    script:
+        - echo "Deploying for Heroku Cloud Platform"
+        - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
+		- git remote add heroku https://git.heroku.com/mark-cloudapp.git
+		- git add .
+		- git commit -am "Release from GitLab"
+		- git push -f heroku master
+    when: manual
