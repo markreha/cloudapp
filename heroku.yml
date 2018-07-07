@@ -1,7 +1,0 @@
-build:
-  pre:
-    - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
-  post:
-    - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
-run:
-  web: heroku-php-apache2
