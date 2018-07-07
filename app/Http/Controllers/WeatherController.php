@@ -61,7 +61,9 @@ class WeatherController extends Controller
 			$serviceURL = "http://test-marktest.7e14.starter-us-west-2.openshiftapps.com/cloudservices/rest/weather/";
 		else if (App::environment('google'))
 			$serviceURL = "https://cloud-workshop-services.appspot.com/rest/weather/";
-        else
+		else if (App::environment('heroku'))
+	        $serviceURL = "https://mark-servicesapp.herokuapp.com/rest/weather/";
+	    else
 			$serviceURL = "http://localhost:8080/cloudservices/rest/weather/";
 		$api = "get";
 		$device = 0;		
