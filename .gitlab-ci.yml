@@ -51,9 +51,9 @@ deploy_heroku:
     only:
         - master
     script:
-        - echo "Deploying for Heroku Cloud Platform"
+        - echo "Deploying for Heroku Cloud Platform......"
         - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
-        - apt-get install git
+        - yum install git -y
         - git remote add heroku https://git.heroku.com/mark-cloudapp.git
         - git add .
         - git commit -am "Release from GitLab"
