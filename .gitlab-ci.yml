@@ -53,8 +53,8 @@ deploy_heroku:
     script:
         - echo "Deploying for Heroku Cloud Platform"
         - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
-		- git remote add heroku https://git.heroku.com/mark-cloudapp.git
-		- git add .
-		- git commit -am "Release from GitLab"
-		- git push -f heroku master
+	- git remote add heroku https://git.heroku.com/mark-cloudapp.git
+	- git add .
+	- git commit -am "Release from GitLab"
+	- git push -f heroku master
     when: manual
