@@ -59,6 +59,6 @@ deploy_heroku:
         - git config --global user.name "Mark Reha"
         - git config --global push.default matching
         - git add -A
-        - git commit -m "Release from GitLab"
+        - git commit -v -m "Release from GitLab"
         - git push heroku
     when: manual
