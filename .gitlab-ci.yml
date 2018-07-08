@@ -54,7 +54,7 @@ deploy_heroku:
         - echo "Deploying for Heroku Cloud Platform"
         - sed -i 's/^APP_ENV=.*/APP_ENV=heroku/' .env
         - yum install git -y
-        - git remote add heroku https://git.heroku.com/mark-cloudapp.git
+        - git remote add heroku https://heroku:f0ac311d-454d-4e41-8f26-b0a1033b7b77@git.heroku.com/mark-cloudapp.git
         - git config --global user.email "markreha@mac.com"
         - git config --global user.name "Mark Reha"
         - git add .
