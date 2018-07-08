@@ -61,5 +61,6 @@ deploy_heroku:
         - git add -A
         - git status
         - git commit -m "Release from GitLab"
-        - git push heroku
+        - git push origin master
+        - git push heroku master
     when: manual
