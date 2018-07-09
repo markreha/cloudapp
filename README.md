@@ -48,6 +48,10 @@ Building
 --------
 The instructions for building the IoT Services Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/development/README.md).
 
+DevOps
+--------
+The instructions for supporting DevOps in the IoT Services Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
+
 
 ----------
 
