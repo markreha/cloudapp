@@ -1,5 +1,5 @@
 @extends('layouts.appmaster') 
-@section('title', 'GCU Cloud Workshop')
+@section('title', 'The Cloud Workshop')
 
 @section('content')
 <div class="flex-center position-ref full-height">
