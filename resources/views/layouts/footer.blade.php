@@ -9,5 +9,5 @@
 </style>
 
 <div class="footer">
-    <h5>Copyright @2018 Grand Canyon University</h5>
+    <h5>Copyright @2018 On The Edge Software Consulting</h5>
 </div>
