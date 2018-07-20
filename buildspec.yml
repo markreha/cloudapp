@@ -5,4 +5,4 @@ build:
       - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
 
 artifacts:
-    files: ./
+    files: **/*
