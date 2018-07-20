@@ -1,0 +1,5 @@
+version: 0.2
+
+build:
+    commands:
+      - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
