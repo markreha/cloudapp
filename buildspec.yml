@@ -8,4 +8,4 @@ post_build:
         - printf '[{"name":"first-run-task-definition","imageUri":"%s"}]' EC2Co-EcsEl-RXYNUFWR0GMG-1993403687.us-east-2.elb.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
  
 artifacts:
-    files: 'imagedefinitions.json'
+    files: '**/*'
