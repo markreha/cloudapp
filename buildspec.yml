@@ -3,13 +3,12 @@ version: 0.2
 phases:
     build:
         commands:
-            - echo 'In My Build............'
+            - echo 'Building Reporting App............'
             - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
-#    post_build:	
-#        commands:
-#            - echo 'In My Post Build.......'
-#            - printf '[{"name":"sample-app","imageUri":"%s"}]' 672037784176.dkr.ecr.us-east-2.amazonaws.com/marks-repo > imagedefinitions.json
-#            - cat imagedefinitions.json
+            - mkdir cloudapp
+            - shopt -s dotglob
+            - rsync -rav --exclude cloudapp ./ ./cloudapp/
+            - zip -r cloudapp.zip cloudapp
         
 artifacts:
-    files: '**/*'
+    files: cloudapp.zip
