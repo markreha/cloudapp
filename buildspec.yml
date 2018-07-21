@@ -5,11 +5,11 @@ phases:
         commands:
             - echo 'In My Build............'
             - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
-    post_build:	
-        commands:
-            - echo 'In My Post Build.......'
-            - printf '[{"name":"sample-app","imageUri":"%s"}]' 672037784176.dkr.ecr.us-east-2.amazonaws.com/marks-repo > imagedefinitions.json
-            - cat imagedefinitions.json
+#    post_build:	
+#        commands:
+#            - echo 'In My Post Build.......'
+#            - printf '[{"name":"sample-app","imageUri":"%s"}]' 672037784176.dkr.ecr.us-east-2.amazonaws.com/marks-repo > imagedefinitions.json
+#            - cat imagedefinitions.json
         
 artifacts:
-    files: imagedefinitions.json
+    files: '**/*'
