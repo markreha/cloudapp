@@ -7,8 +7,8 @@ phases:
             - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
             - cat .env
             - mkdir cloudapp
-            - bash shopt -s dotglob
-            - bash rsync -rav --exclude cloudapp ./ ./cloudapp/
+            - shopt -s dotglob
+            - rsync -rav --exclude cloudapp ./ ./cloudapp/
             - zip -r cloudapp.zip cloudapp
         
 artifacts:
