@@ -12,4 +12,4 @@ phases:
             - zip -r cloudapp.zip .
         
 artifacts:
-    files: cloudapp.zip
+    files: **/*
