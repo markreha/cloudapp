@@ -5,7 +5,7 @@ phases:
         commands:
             - echo 'Building Reporting App............'
             - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
-            - zip ../cloudapp.zip -r .
+            - zip $HOME/cloudapp.zip -r .
 #            - mkdir $HOME/cloudapp
 #            - shopt -s dotglob
 #            - rsync -rav --exclude cloudapp ./ ./cloudapp/
@@ -13,5 +13,5 @@ phases:
 #            - zip -r cloudapp.zip .
         
 artifacts:
-    files: ../cloudapp.zip
+    files: $HOME/cloudapp.zip
 
