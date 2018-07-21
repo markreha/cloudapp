@@ -9,8 +9,8 @@ phases:
 #            - shopt -s dotglob
 #            - rsync -rav --exclude cloudapp ./ ./cloudapp/
 #            - cp -r ./ $HOME/cloudapp/
-            - zip -r cloudapp.zip .
+#            - zip -r cloudapp.zip .
         
 artifacts:
     files: '**/*'
-    discard-paths: yes
+#    discard-paths: yes
