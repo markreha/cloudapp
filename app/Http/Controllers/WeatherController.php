@@ -63,6 +63,8 @@ class WeatherController extends Controller
 			$serviceURL = "https://cloud-workshop-services.appspot.com/rest/weather/";
 		else if (App::environment('heroku'))
 	        $serviceURL = "https://mark-servicesapp.herokuapp.com/rest/weather/";
+		else if (App::environment('amazon'))
+	        $serviceURL = "https://services-app.us-east-2.elasticbeanstalk.com/rest/weather/";
 	    else
 			$serviceURL = "http://localhost:8080/cloudservices/rest/weather/";
 		$api = "get";
