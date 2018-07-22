@@ -4,9 +4,7 @@ phases:
     build:
         commands:
             - echo 'Building Reporting App............'
-            - sed -i 's/^APP_ENV=.*/APP_ENV=openshift/' .env
-#            - zip $HOME/cloudapp.zip -r .
-#            - mv $HOME/cloudapp.zip $CODEBUILD_SRC_DIR/cloudapp.zip
+            - sed -i 's/^APP_ENV=.*/APP_ENV=amazon/' .env
         
 artifacts:
     files: '**/*'
