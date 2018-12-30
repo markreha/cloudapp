@@ -21,7 +21,7 @@ The bulk of the Reporting functionality is implemented in the WeatherController 
 	 <li>Retrieves the POSTED form data from the Weather View:</li>
 	 - reportType = 0 for LavaChart Chart Report, 2 for Plotly Chart Report, 3 for Tabular HTML Data Report, and 4 for jQuery Data Table Data Report<br/>
 	 - fromDate = Report From Date<br/>
-	 - toDate = Report To Date
+	 - toDate = Report To Date<br/>
 	 - device = Device ID (0 is a Pi and 1 is the Arduino)
 	<li>Validates the POSTED form data:</li>
 	 - if validation fails the Weather View is redisplayed
