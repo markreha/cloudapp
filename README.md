@@ -22,10 +22,11 @@ The bulk of the Reporting functionality is implemented in the WeatherController 
 	 - reportType = 0 for LavaChart Chart Report, 2 for Plotly Chart Report, 3 for Tabular HTML Data Report, and 4 for jQuery Data Table Data Report<br/>
 	 - fromDate = Report From Date<br/>
 	 - toDate = Report To Date
-	 <li>Validates the POSTED form data:</li>
+	 - device = Device ID (0 is a Pi and 1 is the Arduino)
+	<li>Validates the POSTED form data:</li>
 	 - if validation fails the Weather View is redisplayed
 	 <li>Invokes the IoT Services REST API to get the Weather Data using the Guzzle HTTP Client class:</li>
-	 - GET request to the IoT Service /get REST API passing a Device ID of 0, the Report From Date, and the Report To Date as API parameters<br/>
+	 - GET request to the IoT Service /get REST API passing a Device ID, the Report From Date, and the Report To Date as API parameters<br/>
 	 - the IoT Services REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the IoT Services Reference application JavaDocs)
 	 <li>Renders the Weather Report:</li>
 	 - If the reportType is 0 then use LavaCharts to render a Line Graph by forwarding to the WeatherReportChart View<br/>
