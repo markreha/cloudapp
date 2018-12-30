@@ -46,6 +46,15 @@
 				<tr align="center">
 					<td colspan="2" style="color:red"><?php echo $errors->first('toDate')?></td>
 				</tr>
+				<tr>
+					<td>IoT Device:</td>
+					<td>
+						<select name="deviceId">
+  							<option value="0">Raspberry Pi</option>
+  							<option value="1">Arduino</option>
+						</select>
+					</td>
+				</tr>
 				<tr align="center">
 					<td colspan="2"><input type="submit" value="Display"></td>
 				</tr>

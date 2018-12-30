@@ -26,10 +26,11 @@ class WeatherController extends Controller
 	 *  	- report = 0 for Lavachart Chart Report or 1 for Plotly Chart Report or 2 for Tabular HTML Data Report or 3 for Tabular jQuery Data Table Report<br/>
 	 *  	- fromDate = report start date<br/>
 	 *  	- toDate = report end date
+	 *  	- device = device ID
 	 *  <li>Validates the form data</li>
 	 *  	- if validation fails the Weather View is redisplayed
 	 *  <li>Calls the Web API to get the Weather Data using the GuzzleHttp Client</li>
-	 *  	- GET request to the CloudService REST /get API passing a Device ID of 0 and From Date and To Date as API parameters<br/>
+	 *  	- GET request to the CloudService REST /get API passing a Device ID and From Date and To Date as API parameters<br/>
 	 *  	- CloudService REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the Cloud Services SDK JavaDocs)
 	 *  <li>Renders a Weather Report</li>
 	 *  	- If report is 0 then use Lavaharts to render a Line Graph forwarding to the WeatherReportChart View<br/>
@@ -50,6 +51,7 @@ class WeatherController extends Controller
 		$report = $request->input("report");
 		$from = $request->input("fromDate");
 		$to = $request->input("toDate");
+		$device = $request->input("deviceId");
 		
 		// Validate the request parameters (note will automatically redirect back to Weather View if errors)
 		$this->validateForm($request);
@@ -63,12 +65,9 @@ class WeatherController extends Controller
 			$serviceURL = "https://cloud-workshop-services.appspot.com/rest/weather/";
 		else if (App::environment('heroku'))
 	        $serviceURL = "https://mark-servicesapp.herokuapp.com/rest/weather/";
-		else if (App::environment('amazon'))
-	        $serviceURL = "http://services-app.us-east-2.elasticbeanstalk.com/rest/weather/";
 	    else
 			$serviceURL = "http://localhost:8080/cloudservices/rest/weather/";
 		$api = "get";
-		$device = 0;		
 		$uri = $api . "/" . $device . "/" . $from . "/" . $to;
 		$username = "CloudWorkshop";
 		$password = "dGVzdHRlc3Q=";
