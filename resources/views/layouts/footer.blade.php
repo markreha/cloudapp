@@ -9,5 +9,5 @@
 </style>
 
 <div class="footer">
-    <h5>Copyright @2018 On The Edge Software Consulting</h5>
+    <h5>Copyright @2021 On The Edge Software Consulting</h5>
 </div>
